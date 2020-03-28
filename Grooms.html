@@ -91,10 +91,10 @@
 				  <h4>City</h4>
 				</div>
 				<div class="col-10">
-					<button class="btn btn-outline-dark">Pune</button>&nbsp;&nbsp;
-					<button class="btn btn-outline-dark">Mumbai</button>&nbsp;&nbsp;
-					<button class="btn btn-outline-dark">Nasik</button>&nbsp;&nbsp;
-					<button class="btn btn-outline-dark">Nagpur</button>&nbsp;&nbsp;
+					<button class="btn btn-outline-dark" id="pune">Pune</button>&nbsp;&nbsp;
+					<button class="btn btn-outline-dark" id="mumbai">Mumbai</button>&nbsp;&nbsp;
+					<button class="btn btn-outline-dark" id="nasik">Nasik</button>&nbsp;&nbsp;
+					<button class="btn btn-outline-dark" id="nagpur">Nagpur</button>&nbsp;&nbsp;
 				</div>
 			  </div>
 			  <br>
@@ -122,7 +122,7 @@
 		
 		
 			  
-		  <div class="row mb-2">
+		  <div class="row mb-2 mumbai">
 			<div class="col-md-4">
 			  <div class="card flex-md-row mb-4 box-shadow h-md-250">
 				<div class="card-body d-flex flex-column align-items-start">
@@ -141,7 +141,7 @@
 				</div>
 			  </div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 pune khalap">
 			  <div class="card flex-md-row mb-4 box-shadow h-md-250">
 				<div class="card-body d-flex flex-column align-items-start">
 				  <strong class="d-inline-block mb-2 text-primary">Groom</strong>
@@ -159,26 +159,7 @@
 				</div>
 			  </div>
 			</div>
-			<div class="col-md-4">
-			  <div class="card flex-md-row mb-4 box-shadow h-md-250">
-				<div class="card-body d-flex flex-column align-items-start">
-				  <strong class="d-inline-block mb-2 text-primary">Groom</strong>
-				  <h3 class="mb-0">
-					<a class="text-dark" href="#">Manoj Kotkar</a>
-				  </h3>
-				  <div class="mb-1 text-muted">12 Nov 1992</div>
-				  
-					<ul class="list-unstyled">
-						<li>Gotra      : <b><i>Khalap</i></b></li>
-						<li>Occupation : <b><i>Khalap</i></b></li>
-						<li>Work City  : <b><i>Pune  </i></b></li>
-					</ul> 
-				  <a href="#">Download Bio-Data</a>
-				</div>
-			  </div>
-			</div>
-			
-			<div class="col-md-4">
+			<div class="col-md-4  pune khalap">
 			  <div class="card flex-md-row mb-4 box-shadow h-md-250">
 				<div class="card-body d-flex flex-column align-items-start">
 				  <strong class="d-inline-block mb-2 text-primary">Groom</strong>
@@ -197,7 +178,26 @@
 			  </div>
 			</div>
 			
-			<div class="col-md-4">
+			<div class="col-md-4  mumbai khalap">
+			  <div class="card flex-md-row mb-4 box-shadow h-md-250">
+				<div class="card-body d-flex flex-column align-items-start">
+				  <strong class="d-inline-block mb-2 text-primary">Groom</strong>
+				  <h3 class="mb-0">
+					<a class="text-dark" href="#">Manoj Kotkar</a>
+				  </h3>
+				  <div class="mb-1 text-muted">12 Nov 1992</div>
+				  
+					<ul class="list-unstyled">
+						<li>Gotra      : <b><i>Khalap</i></b></li>
+						<li>Occupation : <b><i>Khalap</i></b></li>
+						<li>Work City  : <b><i>Mumbai  </i></b></li>
+					</ul> 
+				  <a href="#">Download Bio-Data</a>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="col-md-4 pune">
 			  <div class="card flex-md-row mb-4 box-shadow h-md-250">
 				<div class="card-body d-flex flex-column align-items-start">
 				  <strong class="d-inline-block mb-2 text-primary">Groom</strong>
@@ -230,6 +230,7 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script>
 		  Holder.addTheme('thumb', {
 			bg: '#55595c',
@@ -237,5 +238,17 @@
 			text: 'Thumbnail'
 		  });
 		</script>
+		<script>
+			$(document).ready(function(){
+				$("#pune").click(function(){
+					$(".pune").fadeToggle();
+				});
+				$("#mumbai").click(function(){
+					$(".mumbai").fadeToggle();
+				});
+			});
+
+		</script>
 	</body>
 </html>
+
